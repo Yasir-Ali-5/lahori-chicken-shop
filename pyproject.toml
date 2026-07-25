@@ -1,13 +1,11 @@
 [project]
 name = "yasir-ali"
 version = "0.1.0"
-description = "Add your description here"
+description = "Offline inventory management web application with CSV-backed storage"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.140.0",
-    "google-auth>=2.56.2",
-    "gspread>=6.2.1",
     "httpx>=0.28.1",
     "itsdangerous>=2.2.0",
     "jinja2>=3.1.6",

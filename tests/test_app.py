@@ -30,6 +30,12 @@ def test_login_redirects_to_dashboard():
     assert response.headers["location"] == "/dashboard"
 
 
+def test_health_endpoint_reports_ok():
+    response = client.get("/health")
+    assert response.status_code == 200
+    assert response.json()["status"] == "ok"
+
+
 def test_stock_endpoint_reports_available_stock(tmp_path):
     inventory_service.base_dir = tmp_path
     inventory_service._initialize()

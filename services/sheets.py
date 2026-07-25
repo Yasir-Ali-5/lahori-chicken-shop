@@ -184,17 +184,7 @@ class InventoryService:
         path = self._ensure_csv_file(
             folder,
             self._get_storage_file_name(purchase["product"], "purchase"),
-            [
-                "Date",
-                "Time",
-                "Product Name",
-                "Weight",
-                "Quantity",
-                "Rate",
-                "Total Amount",
-                "Payment Status",
-                "Remarks",
-            ],
+            self.PURCHASE_HEADERS,
         )
 
         total_amount = float(purchase.get("weight", 0)) * float(purchase.get("quantity", 0)) * float(purchase.get("purchase_rate", 0))
@@ -217,17 +207,7 @@ class InventoryService:
         path = self._ensure_csv_file(
             folder,
             self._get_storage_file_name(sale["product"], "sales"),
-            [
-                "Date",
-                "Time",
-                "Product Name",
-                "Weight",
-                "Quantity",
-                "Rate",
-                "Total Amount",
-                "Payment Status",
-                "Remarks",
-            ],
+            self.SALES_HEADERS,
         )
 
         total_amount = float(sale.get("quantity", 0)) * float(sale.get("sale_rate", 0))
