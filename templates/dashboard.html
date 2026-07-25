@@ -98,16 +98,43 @@
             <a class="dashboard-action secondary" href="/sale">Record Sale</a>
           </div>
         </section>
+      </div>
 
-        <section class="card dashboard-panel status-panel">
-          <h3>Storage Status</h3>
-          <p class="storage-copy">{{ sheet_status }}</p>
-          <ul class="feature-list">
-            <li>Offline CSV storage</li>
-            <li>Month-based data folders</li>
-            <li>Live stock summaries</li>
-          </ul>
-        </section>
+      <div class="stat-grid">
+        {% for item in month_summary %}
+        <div class="card stat-card">
+          <div class="stat-header">
+            <span class="stat-title">{{ item.product }}</span>
+            <span class="stat-badge {% if item.stock_balance > 0 %}badge-success{% else %}badge-warning{% endif %}">
+              Stock: {{ item.stock_balance }}
+            </span>
+          </div>
+          <div class="stat-metrics">
+            <div class="metric">
+              <span class="label">Purchased</span>
+              <span class="val">{{ item.purchased_quantity }}</span>
+            </div>
+            <div class="metric">
+              <span class="label">Sold</span>
+              <span class="val">{{ item.sold_quantity }}</span>
+            </div>
+            <div class="metric">
+              <span class="label">Opening</span>
+              <span class="val">{{ item.opening_balance }}</span>
+            </div>
+          </div>
+          <div class="stat-footer">
+            <div class="val-group">
+              <span class="sub-label">Purchase Val:</span>
+              <span class="sub-val">PKR {{ "%.2f"|format(item.purchase_total) }}</span>
+            </div>
+            <div class="val-group">
+              <span class="sub-label">Sale Val:</span>
+              <span class="sub-val">PKR {{ "%.2f"|format(item.sale_total) }}</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
       </div>
 
       <section class="card report-panel">
