@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lahori — Inventory Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body class="login-body">
+    <div class="bg-glow-sun"></div>
+    <div class="bg-sparkle"></div>
+
+    <div class="bg-tower" aria-hidden="true">
+      <svg viewBox="0 0 200 500" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f0c24b" stroke-width="1.2">
+        <path d="M100 10 L108 60 L92 60 Z"/>
+        <line x1="100" y1="10" x2="100" y2="0"/>
+        <path d="M85 60 L115 60 L112 120 L88 120 Z"/>
+        <path d="M78 120 L122 120 L118 190 L82 190 Z"/>
+        <line x1="82" y1="150" x2="118" y2="150"/>
+        <path d="M70 190 L130 190 L124 280 L76 280 Z"/>
+        <line x1="76" y1="220" x2="124" y2="220"/>
+        <line x1="76" y1="250" x2="124" y2="250"/>
+        <path d="M55 280 L145 280 L135 340 L65 340 Z"/>
+        <path d="M35 340 L165 340 L155 400 L45 400 Z"/>
+        <line x1="45" y1="370" x2="155" y2="370"/>
+        <path d="M20 400 L180 400 L185 430 L15 430 Z"/>
+        <line x1="15" y1="430" x2="185" y2="430"/>
+        <line x1="0" y1="440" x2="200" y2="440"/>
+        <path d="M0 470 Q50 445 100 470 T200 470" />
+      </svg>
+    </div>
+
+    <div class="bg-leaves top-left" aria-hidden="true">
+      <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#3fae5c" opacity="0.85">
+          <path d="M10 10 C60 20 90 60 80 110 C40 100 10 60 10 10 Z"/>
+          <path d="M40 40 C90 50 120 90 105 140 C65 125 40 90 40 40 Z" opacity="0.8"/>
+          <path d="M0 70 C40 90 55 130 35 170 C0 155 -15 110 0 70 Z" opacity="0.7"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="bg-leaves bottom-right" aria-hidden="true">
+      <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#3fae5c" opacity="0.85">
+          <path d="M10 10 C60 20 90 60 80 110 C40 100 10 60 10 10 Z"/>
+          <path d="M40 40 C90 50 120 90 105 140 C65 125 40 90 40 40 Z" opacity="0.8"/>
+          <path d="M0 70 C40 90 55 130 35 170 C0 155 -15 110 0 70 Z" opacity="0.7"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="bg-rooster" aria-hidden="true">
+      <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#0a1c10" opacity="0.55">
+          <path d="M180 60 C210 55 230 75 225 100 C245 95 255 115 245 130 C260 135 260 155 245 160 C230 200 195 220 170 225 L170 260 L185 290 L165 290 L155 265 L145 290 L125 290 L140 260 L140 225 C110 220 90 200 80 175 C60 175 45 160 55 140 C40 130 45 110 65 105 C60 80 80 60 105 65 C110 45 140 35 160 45 C165 35 175 30 180 40 Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <main class="page">
+      <div class="brand">
+        <h1 class="wordmark">
+          LAHORI
+          <svg class="crown" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 50 L15 15 L32 35 L50 8 L68 35 L85 15 L95 50 Z" fill="#f0c24b" stroke="#c9932a" stroke-width="2"/>
+            <circle cx="15" cy="12" r="6" fill="#f0c24b"/>
+            <circle cx="50" cy="6" r="6" fill="#f0c24b"/>
+            <circle cx="85" cy="12" r="6" fill="#f0c24b"/>
+          </svg>
+        </h1>
+      </div>
+
+      <div class="tagline-row">
+        <span class="line"></span>
+        <span class="tagline">معیار جو دل جیت لے</span>
+        <span class="line right"></span>
+      </div>
+
+      <div class="card">
+        <div class="login-heading">
+          <span class="divider"></span>
+          <h1>
+            <svg class="lock-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm-3 8V6a3 3 0 016 0v3H9zm3 4a2 2 0 012 2c0 .74-.4 1.38-1 1.72V19a1 1 0 01-2 0v-1.28c-.6-.34-1-.98-1-1.72a2 2 0 012-2z"/></svg>
+            LOGIN
+          </h1>
+          <span class="divider right"></span>
+        </div>
+        <div class="diamond"></div>
+
+        <form method="post" action="/" class="auth-form" novalidate>
+          <label class="field-label" for="password">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a5 5 0 00-5 5v3H6a2 2 0 00-2 2v9a2 2 0 002 2h12a2 2 0 002-2v-9a2 2 0 00-2-2h-1V6a5 5 0 00-5-5zm-3 8V6a3 3 0 016 0v3H9z"/></svg>
+            Password
+          </label>
+          <div class="input-wrap">
+            <input id="password" name="password" type="password" placeholder="Enter shop password" autocomplete="current-password" required>
+            <button type="button" class="toggle-visibility" id="toggleBtn" aria-label="Show password">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="eyeIcon">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          {% if error %}
+          <p class="message error show">{{ error }}</p>
+          {% endif %}
+
+          <button type="submit" class="submit-btn">
+            <span>ENTER SHOP</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="features">
+        <span class="feature">
+          <span class="badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3c8 0 14 6 14 14M6 8c5 0 10 5 10 10"/></svg>
+          </span>
+          FRESH
+        </span>
+        <span class="sep">|</span>
+        <span class="feature">
+          <span class="badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C1 8 3 4 7 4c2 0 4 1.5 5 3.5C13 5.5 15 4 17 4c4 0 6 4 4.5 8-2.5 4.5-9.5 9-9.5 9z"/></svg>
+          </span>
+          HEALTHY
+        </span>
+        <span class="sep">|</span>
+        <span class="feature">
+          <span class="badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V5l8-3z"/></svg>
+          </span>
+          HYGIENIC
+        </span>
+      </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

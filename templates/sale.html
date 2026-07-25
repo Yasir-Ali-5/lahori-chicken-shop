@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lahori — Sale Entry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body class="purchase-body sale-body">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="wordmark">LAHORI
+          <svg class="crown" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 50 L15 15 L32 35 L50 8 L68 35 L85 15 L95 50 Z" fill="#f0c24b" stroke="#c9932a" stroke-width="2"/>
+            <circle cx="15" cy="12" r="6" fill="#f0c24b"/>
+            <circle cx="50" cy="6" r="6" fill="#f0c24b"/>
+            <circle cx="85" cy="12" r="6" fill="#f0c24b"/>
+          </svg>
+        </span>
+        <div class="tagline">معیار جو دل جیت لے</div>
+      </div>
+
+      <nav class="nav-list">
+        <a class="nav-item" href="/purchase">Purchase Entry</a>
+        <a class="nav-item active" href="/sale">Sale Entry</a>
+        <a class="nav-item" href="/dashboard">Dashboard</a>
+        <a class="nav-item" href="/logout">Logout</a>
+      </nav>
+
+      <div class="sidebar-art">
+        <div class="rooster-frame">
+          <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#0a1c10" opacity="0.7">
+              <path d="M180 60 C210 55 230 75 225 100 C245 95 255 115 245 130 C260 135 260 155 245 160 C230 200 195 220 170 225 L170 260 L185 290 L165 290 L155 265 L145 290 L125 290 L140 260 L140 225 C110 220 90 200 80 175 C60 175 45 160 55 140 C40 130 45 110 65 105 C60 80 80 60 105 65 C110 45 140 35 160 45 C165 35 175 30 180 40 Z"/>
+            </g>
+            <path d="M198 78 L206 68 L204 82 L214 88 L200 90 Z" fill="#f0c24b"/>
+          </svg>
+        </div>
+        <div class="badge-card">
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+            Fresh &middot; Healthy &middot; Hygienic
+          </div>
+          <div class="sub">Better Chicken &middot; Better Life</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="mobile-shell">
+      <div class="mobile-topbar">
+        <div class="brand-mini">
+          <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg"><path d="M5 50 L15 15 L32 35 L50 8 L68 35 L85 15 L95 50 Z" fill="#f0c24b" stroke="#c9932a" stroke-width="2"/></svg>
+          LAHORI
+        </div>
+        <button class="mobile-nav-toggle" id="navToggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="mobile-nav-drawer" id="navDrawer">
+        <a class="nav-item" href="/purchase">Purchase Entry</a>
+        <a class="nav-item active" href="/sale">Sale Entry</a>
+        <a class="nav-item" href="/dashboard">Dashboard</a>
+        <a class="nav-item" href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <main class="purchase-main">
+      <div class="page-header">
+        <div class="title-block">
+          <svg class="title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          <div>
+            <h1>Sale Entry</h1>
+            <p>Record a sale and validate the available stock before saving.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a class="pill-btn" href="/dashboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Dashboard
+          </a>
+          <a class="pill-btn" href="/logout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Logout
+          </a>
+        </div>
+      </div>
+
+      {% if message %}
+      <p class="message {{ message_type }}">{{ message }}</p>
+      {% endif %}
+
+      <form class="card purchase-card" method="post" action="/sale" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label class="field-label" for="product">
+              <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></span>
+              Product
+            </label>
+            <select id="product" name="product" required>
+              {% for product in products %}
+              <option value="{{ product }}" {% if form_data and form_data.product == product %}selected{% endif %}>{{ product }}</option>
+              {% endfor %}
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="sale_rate">
+              <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5c0-1.4 1.3-2.5 3-2.5s3 1.1 3 2.5-1.3 2-3 2.5-3 1.1-3 2.5 1.3 2.5 3 2.5 3-1.1 3-2.5"/></svg></span>
+              Sale Rate
+            </label>
+            <input type="number" id="sale_rate" name="sale_rate" step="0.01" min="0" placeholder="0" value="{{ form_data.sale_rate if form_data else '' }}" required>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="quantity">
+              <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5 9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
+              Quantity
+            </label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="0" value="{{ form_data.quantity if form_data else '' }}" required>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="customer_name">
+              <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              Customer Name
+            </label>
+            <input type="text" id="customer_name" name="customer_name" placeholder="Enter customer name" value="{{ form_data.customer_name if form_data else '' }}" required>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="date">
+              <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+              Date
+            </label>
+            <input type="date" id="date" name="date" value="{{ form_data.date if form_data else today }}" required>
+          </div>
+
+          <div class="field full">
+            <label class="field-label" for="notes">
+              <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span>
+              Notes (Optional)
+            </label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Enter any additional notes...">{{ form_data.notes if form_data else '' }}</textarea>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <div class="stock-pill" id="stock-display">Available Stock: {{ available_stock if available_stock is not none else 'Select a product to calculate' }}</div>
+          <button type="submit" class="save-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            Save Sale
+          </button>
+          <div class="footnote">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V5l8-3z"/></svg>
+            Inventory availability is checked before every sale is recorded.
+          </div>
+        </div>
+      </form>
+      <p class="muted small sheet-status">{{ sheet_status }}</p>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>

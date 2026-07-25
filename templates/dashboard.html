@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lahori — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body class="purchase-body dashboard-body">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="wordmark">LAHORI
+          <svg class="crown" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 50 L15 15 L32 35 L50 8 L68 35 L85 15 L95 50 Z" fill="#f0c24b" stroke="#c9932a" stroke-width="2"/>
+            <circle cx="15" cy="12" r="6" fill="#f0c24b"/>
+            <circle cx="50" cy="6" r="6" fill="#f0c24b"/>
+            <circle cx="85" cy="12" r="6" fill="#f0c24b"/>
+          </svg>
+        </span>
+        <div class="tagline">معیار جو دل جیت لے</div>
+      </div>
+
+      <nav class="nav-list">
+        <a class="nav-item" href="/purchase">Purchase Entry</a>
+        <a class="nav-item" href="/sale">Sale Entry</a>
+        <a class="nav-item active" href="/dashboard">Dashboard</a>
+        <a class="nav-item" href="/logout">Logout</a>
+      </nav>
+
+      <div class="sidebar-art">
+        <div class="rooster-frame">
+          <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
+            <g fill="#0a1c10" opacity="0.7">
+              <path d="M180 60 C210 55 230 75 225 100 C245 95 255 115 245 130 C260 135 260 155 245 160 C230 200 195 220 170 225 L170 260 L185 290 L165 290 L155 265 L145 290 L125 290 L140 260 L140 225 C110 220 90 200 80 175 C60 175 45 160 55 140 C40 130 45 110 65 105 C60 80 80 60 105 65 C110 45 140 35 160 45 C165 35 175 30 180 40 Z"/>
+            </g>
+            <path d="M198 78 L206 68 L204 82 L214 88 L200 90 Z" fill="#f0c24b"/>
+          </svg>
+        </div>
+        <div class="badge-card">
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+            Fresh &middot; Healthy &middot; Hygienic
+          </div>
+          <div class="sub">Better Chicken &middot; Better Life</div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="mobile-shell">
+      <div class="mobile-topbar">
+        <div class="brand-mini">
+          <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg"><path d="M5 50 L15 15 L32 35 L50 8 L68 35 L85 15 L95 50 Z" fill="#f0c24b" stroke="#c9932a" stroke-width="2"/></svg>
+          LAHORI
+        </div>
+        <button class="mobile-nav-toggle" id="navToggle" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="mobile-nav-drawer" id="navDrawer">
+        <a class="nav-item" href="/purchase">Purchase Entry</a>
+        <a class="nav-item" href="/sale">Sale Entry</a>
+        <a class="nav-item active" href="/dashboard">Dashboard</a>
+        <a class="nav-item" href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <main class="purchase-main dashboard-main">
+      <div class="page-header">
+        <div class="title-block">
+          <svg class="title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 12l4.5-4.5M3 12l4.5 4.5M21 12l-4.5-4.5M21 12l-4.5 4.5"/></svg>
+          <div>
+            <h1>Dashboard</h1>
+            <p>Welcome back. Keep purchases, sales, and stock movement in sync.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <a class="pill-btn" href="/purchase">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            New Purchase
+          </a>
+          <a class="pill-btn" href="/sale">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h18v14H7l-4 4z"/><path d="M8 9h8M8 13h5"/></svg>
+            New Sale
+          </a>
+        </div>
+      </div>
+
+      <div class="dashboard-grid">
+        <section class="card dashboard-panel hero-panel">
+          <div class="hero-badge">Lahori Inventory Hub</div>
+          <h2>Manage stock movements with calm precision.</h2>
+          <p>Use the purchase and sale screens to record every movement and keep the inventory sheet accurate in real time.</p>
+          <div class="action-grid">
+            <a class="dashboard-action primary" href="/purchase">Record Purchase</a>
+            <a class="dashboard-action secondary" href="/sale">Record Sale</a>
+          </div>
+        </section>
+
+        <section class="card dashboard-panel status-panel">
+          <h3>Storage Status</h3>
+          <p class="storage-copy">{{ sheet_status }}</p>
+          <ul class="feature-list">
+            <li>Offline CSV storage</li>
+            <li>Month-based data folders</li>
+            <li>Live stock summaries</li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="card report-panel">
+        <div class="report-header">
+          <div>
+            <h3>Monthly Report</h3>
+            <p>Current month data from the local CSV files.</p>
+          </div>
+          <span class="report-pill">{{ current_month_label }}</span>
+        </div>
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Purchases</th>
+                <th>Sales</th>
+                <th>Opening</th>
+                <th>Stock</th>
+                <th>Purchase Value</th>
+                <th>Sale Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in month_summary %}
+              <tr>
+                <td>{{ item.product }}</td>
+                <td>{{ item.purchased_quantity }}</td>
+                <td>{{ item.sold_quantity }}</td>
+                <td>{{ item.opening_balance }}</td>
+                <td>{{ item.stock_balance }}</td>
+                <td>{{ "%.2f"|format(item.purchase_total) }}</td>
+                <td>{{ "%.2f"|format(item.sale_total) }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
